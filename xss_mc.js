@@ -1,5 +1,6 @@
 var xhr = new XMLHttpRequest();
 xhr.open("POST", "https://mc.manuscriptcentral.com/psrm", true);
+console.log("reached line 3");
 xhr.setRequestHeader("Content-Type", "multipart/form-data; boundary=----WebKitFormBoundaryXYZ");
 xhr.withCredentials = true;
 var body = "------WebKitFormBoundaryXYZ\r\n";
@@ -7,3 +8,4 @@ body += "Content-Disposition: form-data; name=\"data\"\r\n\r\n";
 body += "plumbus \r\n";
 body += "------WebKitFormBoundaryXYZ--";
 xhr.send(body);
+console.log("reached the end");
